@@ -13,8 +13,12 @@ export const Button = ({
 	type?: React.ButtonHTMLAttributes<HTMLButtonElement>['type']; // Необязательный пропс для типа кнопки
 }) => {
 	return (
-		<button className={styles.button} type={type} onClick={onClick}> {/* Кнопка с классом для стилизации и обработчиком клика */}
-			<Text weight={800} uppercase> {/* Текст внутри кнопки с жирным шрифтом и заглавными буквами */}
+		<button className={styles.button} type={type} onClick={onClick}>
+			{' '}
+			{/* Кнопка с классом для стилизации и обработчиком клика */}
+			<Text weight={800} uppercase>
+				{' '}
+				{/* Текст внутри кнопки с жирным шрифтом и заглавными буквами */}
 				{title} {/* Отображение текста кнопки */}
 			</Text>
 		</button>

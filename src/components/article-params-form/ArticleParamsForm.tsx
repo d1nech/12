@@ -36,11 +36,21 @@ export const ArticleParamsForm = ({ onChange }: ArticleParamsFormProps) => {
 	const [isMenuOpen, setIsMenuOpen] = useState<boolean>(false);
 
 	// Состояния для каждого параметра статьи
-	const [fontFamily, setfontFamily] = useState<OptionType>(defaultStateForm.current.fontFamilyOption);
-	const [fontSize, setfontSize] = useState<OptionType>(defaultStateForm.current.fontSizeOption);
-	const [backgroundColor, setBackgroundColor] = useState<OptionType>(defaultStateForm.current.backgroundColor);
-	const [fontColor, setFontColor] = useState<OptionType>(defaultStateForm.current.fontColor);
-	const [contentWidth, setContentWidth] = useState<OptionType>(defaultStateForm.current.contentWidth);
+	const [fontFamily, setfontFamily] = useState<OptionType>(
+		defaultStateForm.current.fontFamilyOption
+	);
+	const [fontSize, setfontSize] = useState<OptionType>(
+		defaultStateForm.current.fontSizeOption
+	);
+	const [backgroundColor, setBackgroundColor] = useState<OptionType>(
+		defaultStateForm.current.backgroundColor
+	);
+	const [fontColor, setFontColor] = useState<OptionType>(
+		defaultStateForm.current.fontColor
+	);
+	const [contentWidth, setContentWidth] = useState<OptionType>(
+		defaultStateForm.current.contentWidth
+	);
 
 	// Хук для закрытия меню при клике вне его области
 	useClose({
@@ -96,12 +106,15 @@ export const ArticleParamsForm = ({ onChange }: ArticleParamsFormProps) => {
 
 	return (
 		<div ref={asideRef}>
-			<ArrowButton onClick={toggleStateMenu} isMenuOpen={isMenuOpen} /> {/* Кнопка для открытия/закрытия меню */}
+			<ArrowButton onClick={toggleStateMenu} isMenuOpen={isMenuOpen} />{' '}
+			{/* Кнопка для открытия/закрытия меню */}
 			<aside
 				className={clsx(styles.container, {
 					[styles.container_open]: isMenuOpen, // Если меню открыто, применяем класс для отображения
 				})}>
-				<form className={styles.form} onSubmit={handleOnSubmitForm}> {/* Форма для изменения параметров статьи */}
+				<form className={styles.form} onSubmit={handleOnSubmitForm}>
+					{' '}
+					{/* Форма для изменения параметров статьи */}
 					<Text as='h2' size={31} weight={800} uppercase>
 						Задайте параметры {/* Заголовок формы */}
 					</Text>
@@ -150,7 +163,8 @@ export const ArticleParamsForm = ({ onChange }: ArticleParamsFormProps) => {
 							type='reset'
 							onClick={handleOnClickButtonReset} // Сброс значений на начальные
 						/>
-						<Button title='Применить' type='submit' /> {/* Кнопка для применения изменений */}
+						<Button title='Применить' type='submit' />{' '}
+						{/* Кнопка для применения изменений */}
 					</div>
 				</form>
 			</aside>

@@ -47,8 +47,12 @@ export const Option = (props: OptionProps) => {
 			onClick={handleClick(value)} // Обработчик клика
 			tabIndex={0} // Делаем элемент фокусируемым
 			data-testid={`select-option-${value}`} // Атрибут для тестирования
-			ref={optionRef}> {/* Ссылка на элемент */}
-			<Text family={isFontFamilyClass(className) ? className : undefined}> {/* Применяем шрифт, если это валидный класс шрифта */}
+			ref={optionRef}>
+			{' '}
+			{/* Ссылка на элемент */}
+			<Text family={isFontFamilyClass(className) ? className : undefined}>
+				{' '}
+				{/* Применяем шрифт, если это валидный класс шрифта */}
 				{title} {/* Название опции */}
 			</Text>
 		</li>
