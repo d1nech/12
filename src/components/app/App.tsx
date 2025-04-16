@@ -17,7 +17,8 @@ export const App = () => {
 		// Основной элемент страницы (главный блок)
 		<main
 			className={styles.main} // Применение стилей из импортированного CSS-модуля
-			style={ // Инлайн-стили, которые будут изменяться в зависимости от состояния
+			style={
+				// Инлайн-стили, которые будут изменяться в зависимости от состояния
 				{
 					'--font-family': styleArticle.fontFamilyOption.value, // Задает шрифт через CSS-переменную
 					'--font-size': styleArticle.fontSizeOption.value, // Задает размер шрифта через CSS-переменную
@@ -26,7 +27,7 @@ export const App = () => {
 					'--bg-color': styleArticle.backgroundColor.value, // Задает цвет фона через CSS-переменную
 				} as CSSProperties // Преобразуем объект в тип CSSProperties, чтобы TypeScript знал, что это валидные CSS-стили
 			}>
-			<ArticleParamsForm onChange={setStyleArticle} /> 
+			<ArticleParamsForm onChange={setStyleArticle} />
 			<Article />
 		</main>
 	);

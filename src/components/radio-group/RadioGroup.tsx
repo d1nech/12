@@ -22,7 +22,9 @@ export const RadioGroup = (props: RadioGroupProps) => {
 	const handleChange = (option: OptionType) => onChange?.(option);
 
 	return (
-		<div className={styles.container}> {/* Контейнер для всей группы радио-кнопок */}
+		<div className={styles.container}>
+			{' '}
+			{/* Контейнер для всей группы радио-кнопок */}
 			{title && ( // Если передан заголовок, отображаем его
 				<>
 					<Text weight={800} size={12} uppercase>
@@ -30,7 +32,9 @@ export const RadioGroup = (props: RadioGroupProps) => {
 					</Text>
 				</>
 			)}
-			<div className={styles.group}> {/* Контейнер для всех опций */}
+			<div className={styles.group}>
+				{' '}
+				{/* Контейнер для всех опций */}
 				{/* Отображаем все опции, переданные через пропс options */}
 				{options.map((option) => (
 					<Option

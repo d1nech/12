@@ -89,12 +89,19 @@ export const Select = (props: SelectProps) => {
 					onClick={handlePlaceHolderClick} // Обработчик клика по placeholder
 					role='button' // Указываем, что это интерактивный элемент
 					tabIndex={0} // Делаем placeholder фокусируемым
-					ref={placeholderRef}> {/* Ссылка на placeholder для обработки клавиши Enter */}
+					ref={placeholderRef}>
+					{' '}
+					{/* Ссылка на placeholder для обработки клавиши Enter */}
 					<Text
-						family={isFontFamilyClass(selected?.className)
-							? selected?.className
-							: undefined}> {/* Применение шрифта, если это валидный класс шрифта */}
-						{selected?.title || placeholder} {/* Отображение выбранной опции или текста по умолчанию */}
+						family={
+							isFontFamilyClass(selected?.className)
+								? selected?.className
+								: undefined
+						}>
+						{' '}
+						{/* Применение шрифта, если это валидный класс шрифта */}
+						{selected?.title || placeholder}{' '}
+						{/* Отображение выбранной опции или текста по умолчанию */}
 					</Text>
 				</div>
 				{/* Если список открыт, отображаем опции */}
